@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [name, setName] = useState('...');
-  // var url = "https://5000-luckone9-flaskintroduct-3bp97owamkf.ws-us108.gitpod.io/api/name";
-  var url = process.env.REACT_APP_BACKEND_URL+"/api/name";
+  var url = (process.env.REACT_APP_BACKEND_URL ?? "http://localhost:5000")+"/api/name";
 
   useEffect(() => {
     fetch(url)

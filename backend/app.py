@@ -7,7 +7,7 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['DEBUG'] = bool(os.getenv('FLASK_DEBUG')) or False
-CORS(app, origins=os.getenv('DEV_FRONTEND_URL'))
+CORS(app, origins=[os.getenv('DEV_FRONTEND_URL') or "http://localhost:3000"])
 
 @app.route("/")
 def home():
