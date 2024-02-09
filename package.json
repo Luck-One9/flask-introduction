@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "back": "cd backend && . venv/bin/activate && flask run",
+        "front": "cd frontend && npm start"
+    }
+}

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [name, setName] = useState('...');
-  var url = "https://5000-luckone9-flaskintroduct-3bp97owamkf.ws-us108.gitpod.io/api/name";
+  // var url = "https://5000-luckone9-flaskintroduct-3bp97owamkf.ws-us108.gitpod.io/api/name";
+  var url = process.env.REACT_APP_BACKEND_URL+"/api/name";
 
   useEffect(() => {
     fetch(url)
@@ -21,7 +22,9 @@ function App() {
   });
 
   return (
-    <h1>Hello, {name}</h1>
+    <>
+      <h1>Hello, { name }</h1>
+    </>
   );
 }
 
